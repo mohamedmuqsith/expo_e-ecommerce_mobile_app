@@ -7,7 +7,7 @@ const app = express();
 const __dirname=path.resolve(); // __dirname is an absolute path. and path.resolve() will give us the absolute path of the current directory
 
 app.get("/api/health", (req, res) => {
-  res.status(200).json({ message: "succuess" })
+  res.status(200).json({message:"success"})
 });
 
 //make our app ready for deployement
@@ -20,6 +20,6 @@ if (ENV.NODE_ENV === "production") {
 }
 
 app.listen(ENV.PORT, () => {
-  console.log(`Server is running on port ${ENV.PORT}`);
+  console.log(`Server is running on port`);
 })
 
